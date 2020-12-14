@@ -3,7 +3,7 @@
 
 # AWSのUbuntu 18.04インスタンスでの手順
 1. `sudo apt update && sudo apt upgrade -y`でパッケージを更新する。
-2. `sh docker_install.sh`でDockerをインストールする。
-3. `sh rootless_ubuntu1804.sh`でRootless Dockerをインストールして再起動する。一旦インスタンスとの接続が切れます。
+2. `docker_install.sh`でDockerをインストールする。
+3. `rootless_ubuntu1804.sh`でRootless Dockerをインストールして再起動する。一旦インスタンスとの接続が切れます。
 
 以上です。後はハンズオンの[RootlessとrootありのDockerを使い分ける](https://github.com/sanitas7/rootless-docker-handson#rootless%E3%81%A8root%E3%81%82%E3%82%8A%E3%81%AEdocker%E3%82%92%E4%BD%BF%E3%81%84%E5%88%86%E3%81%91%E3%82%8B)から進めればRootless Dockerが正常に機能していることが確認できます。

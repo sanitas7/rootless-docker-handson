@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt-get update
 
 # インストーラのダウンロードと実行
