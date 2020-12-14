@@ -11,7 +11,9 @@
 Docker: 20.10
 
 # 導入手順
-<span style="color: red; ">DockerにRootless modeを導入する手順は[公式ドキュメント](https://docs.docker.com/engine/security/rootless/)で説明されています。最新の情報については公式ドキュメントを参照してください。</span>
+<span style="color: red; ">DockerにRootless modeを導入する手順は[公式ドキュメント](https://docs.docker.com/engine/security/rootless/)で説明されています。最新の情報については公式ドキュメントを参照してください。</span>  
+  
+シェルスクリプトによるインストール手順については[installer.md](https://github.com/sanitas7/rootless-docker-handson/blob/master/installer.md)を参照してください。
 
 ## 前提となるパッケージのインストール
 以下のコマンドを実行して`newuidmap`がホストOSインストールされているか確認します。パスが表示される場合はインストール済みです。
