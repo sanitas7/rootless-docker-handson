@@ -54,13 +54,15 @@ ls -l | grep test_rootless
 ## contextの作成
 Rootless Dockerと`root`ありのDockerを使い分けられるように、contextを作成します。
 ```bash
-docker context create rootless --description "for rootless mode" --docker "host=unix://$XDG_RUNTIME_DIR/docker.sock"
+docker context create rootless \
+  --description "for rootless mode" \
+  --docker "host=unix://$XDG_RUNTIME_DIR/docker.sock"
 ```
 
 # RootlessとrootありのDockerを使い分ける
 Rootless modeを導入した後でも、これまでと同じように`root`でDockerを使いたいというケースがあるかもしれません。その場合でも、contextを切り替えることで簡単に`rootless`と`root`ありのDockerを使い分けることができます。  
   
-Rootless modeを導入することができたら、一度マシンを再起動して以下のコマンドを実行してみてください。
+Rootless modeを導入することができたら、一度マシンを(`sudo reboot`などで)再起動して以下のコマンドを実行してみてください。
 ```bash
 docker context ls
 ```
@@ -80,7 +82,7 @@ ls -l | grep test_root
 ```bash
 docker context use rootless
 docker run --rm -v $PWD:/home ubuntu touch /home/test_rootless2
-ls -l | grep test_rootless3
+ls -l | grep test_rootless2
 # -rw-r--r-- 1 sanitas sanitas      0 12月 14 20:33 test_rootless2
 ```
 所有者が`non-root`になっています。これで`root`ありと`rootless`のDockerが使い分けられるようになりました。`root`ありに戻したい場合は以下のコマンドを実行すればOKです。
