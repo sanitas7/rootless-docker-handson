@@ -17,6 +17,3 @@ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 docker context create rootless \
     --description "for rootless mode" \
     --docker "host=unix://$XDG_RUNTIME_DIR/docker.sock"
-
-# 再起動
-sudo reboot
