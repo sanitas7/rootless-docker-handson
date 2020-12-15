@@ -4,7 +4,7 @@
 # Rootless Dockerとは
 一言で説明すると、Docker daemonとコンテナを`non-root`で実行できるようにしてくれるモードのことです。これを使うことでセキュリティを強化できます。さらに、今まで多くの人を悩ませてきたであろう[Dockerでファイルを作成したときの所有者が`root`になってしまう問題](https://qiita.com/yohm/items/047b2e68d008ebb0f001)も簡単に解決できます。  
   
-このリポジトリでは、(1) Rootless DockerをUbuntuでインストールする方法と(2) Rootless Dockerと今までと同じ`root`ありのDockerを使い分ける方法について、ハンズオン形式で説明します。
+このリポジトリでは、(1) Rootless DockerをUbuntuでインストールする方法と(2) `docker context`コマンドを使ってRootless Dockerと今までと同じ`root`ありのDockerを使い分ける方法について、ハンズオン形式で説明します。
 
 # 実行環境
 ホストOS: Ubuntu 18.04.5  
